@@ -2,3 +2,8 @@ body {
     background-color: #454545;
     color: #DDDDDD;
 }
+
+a {
+    color: #DDEEDD;
+    text-decoration: none;
+}
