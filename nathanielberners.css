@@ -10,21 +10,10 @@ body {
     color: #DDDDDD;
     font-family: 'Terminus';
 }
-.container {
-    display: flex;
-    direction: column;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-}
 .item {
-    width: 100%;
-    margin 10px 0;
-    padding: 15px;
-}
-@media ( max-width: 600px ) {
-    .item {
-        flex: 1 1 100%;
+    #header {
+        width: 100%;
+        height: 150px;
     }
 }
 
@@ -32,11 +21,4 @@ body {
 a {
     color: #DDEEDD;
     text-decoration: none;
-}
-
-img.header {
-    width:  150px;
-    height: 150px;
-    margin-right: 15px;
-    float: left;
 }
