@@ -13,3 +13,8 @@ a {
     color: #DDEEDD;
     text-decoration: none;
 }
+
+img.header {
+    width:  150px;
+    height: 150px;
+}
