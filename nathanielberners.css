@@ -3,6 +3,7 @@
     src: url( 'TerminusTTF-4.46.0.ttf' ) format( 'truetype' ); 
 }
 
+/*** Website body and structure ***/
 body {
     margin: 0;
     background-color: #454545;
@@ -27,6 +28,7 @@ body {
     }
 }
 
+/*** Formatting ***/
 a {
     color: #DDEEDD;
     text-decoration: none;
