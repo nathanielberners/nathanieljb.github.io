@@ -41,10 +41,7 @@ a {
 ul {
     margin:             5px;
     padding:            0px;
-}
-li {
-    margin:             1px;
-    padding:            0px;
+    list-style-type:    none;
 }
 
 
