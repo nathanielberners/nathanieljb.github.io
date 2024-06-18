@@ -10,8 +10,12 @@ body {
     color: #DDDDDD;
     font-family: 'Terminus';
 }
-#header {
+.item {
     width: 100%;
+    margin: 5px;
+    padding: 5px;
+}
+#header {
     height: 150px;
 }
 
