@@ -1,12 +1,12 @@
 @font-face {
     font-family: "Terminus";
-    src: url( "TerminusTTF-4.46.0.ttf" ) format( "truetype" ); 
+    src: url( 'TerminusTTF-4.46.0.ttf' ) format( 'truetype' ); 
 }
 
 body {
     background-color: #454545;
     color: #DDDDDD;
-    font-family: "Terminus";
+    font-family: 'Terminus';
 }
 
 a {
