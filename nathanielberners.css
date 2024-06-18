@@ -9,6 +9,7 @@ body {
     background-color: #454545;
     color: #DDDDDD;
     font-family: 'Terminus';
+    width: 600px;
 }
 .item {
     width: 100%;
