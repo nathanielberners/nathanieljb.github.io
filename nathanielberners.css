@@ -4,18 +4,29 @@
 }
 
 body {
+    margin: 0;
     background-color: #454545;
     color: #DDDDDD;
     font-family: 'Terminus';
+}
+.container {
+    display: flex;
+    flex: wrap;
+}
+.item {
+    flex: 1 1 45%;
+    margin: 10px;
+    padding: 20px;
+}
+@media ( max-width: 600px ) {
+    .item {
+        flex: 1 1 100%;
+    }
 }
 
 a {
     color: #DDEEDD;
     text-decoration: none;
-}
-
-div {
-    border-bottom: 10px;
 }
 
 img.header {
