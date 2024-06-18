@@ -4,16 +4,16 @@ document.addEventListener( 'DOMContentLoaded', () => {
         fetch( url )
             .then( response => {
                 if( !response.ok ) {
-                    throw new Error( 'HTTP error! status: ${response.status}' );
+                    throw new Error( `HTTP error! status: ${response.status}` );
                 }
                 return response.text();
             })
-            then( html => {
+            .then( html => {
                 document.getElementById( targetElementID ).innerHTML = html;
             })
             .catch( error => {
                 console.error( 'Error loading external HTML:' error );
-            })
+            });
     }
 
     loadExternalHTML( 'test.html', 'content' );
