@@ -14,8 +14,12 @@ a {
     text-decoration: none;
 }
 
+div.header {
+    height: 150px;
+}
 img.header {
     width:  150px;
     height: 150px;
+    margin-right: 15px;
     float: left;
 }
