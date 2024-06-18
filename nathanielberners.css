@@ -25,6 +25,14 @@ a {
     color: #DDEEDD;
     text-decoration: none;
 }
+h1 {
+    margin: 5px;
+    padding: 0px;
+}
+h3 {
+    margin 5px;
+    padding: 0px;
+
 #headerimg {
     width: 100px;
     height: 100px;
