@@ -36,4 +36,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Fetch and load all HTML files listed in tilesList.json
   fetchHtmlFilesList();
-});:
+});
