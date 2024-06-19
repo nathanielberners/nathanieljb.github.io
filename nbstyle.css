@@ -29,9 +29,10 @@ body {
     padding:            5px;
 }
 #tiledwall {
+    min-width:          600px;
+    float:              right;
 }
 #aside {
-    float: inline-start;
 }
 
 
