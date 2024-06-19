@@ -29,10 +29,11 @@ body {
     padding:            5px;
 }
 #aside {
-    float: left;
+    float:              left;
 }
-#maincontent {
+#main {
     min-width:          600px;
+    float:              right;
 }
 
 
