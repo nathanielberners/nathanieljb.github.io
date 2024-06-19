@@ -31,7 +31,7 @@ body {
 #aside {
     float:              left;
 }
-#main {
+#maincontent {
     min-width:          600px;
     float:              right;
 }
