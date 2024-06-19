@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Function to load external HTML
   function loadExternalHTML(url, targetElementId) {
     fetch(url)
       .then(response => {
@@ -9,13 +8,32 @@ document.addEventListener('DOMContentLoaded', () => {
         return response.text();
       })
       .then(html => {
-        document.getElementById(targetElementId).innerHTML = html;
+        document.getElementById(targetElementId).innerHTML += html;
       })
       .catch(error => {
         console.error('Error loading external HTML:', error);
       });
   }
 
-  // Load the content from test.html into the div with id "dynamicContent"
-  loadExternalHTML('test.html', 'maincontent');
+  function fetchHtmlFilesList() {
+    fetch('tilesList.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        const files = data.files;
+        files.forEach(file => {
+          loadExternalHTML(file, 'dynamicContent');
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching HTML file list:', error);
+      });
+  }
+
+  // Fetch and load all HTML files listed in tilesList.json
+  fetchHtmlFilesList();
 });
