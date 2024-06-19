@@ -1,6 +1,6 @@
 @font-face {
     font-family:        "Terminus";
-    src:                url( 'TerminusTTF-4.46.0.ttf' ) format( 'truetype' ); 
+    src:                url( 'resources/TerminusTTF-4.46.0.ttf' ) format( 'truetype' ); 
 }
 
 /*** Website body and structure ***/
