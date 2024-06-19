@@ -29,11 +29,9 @@ body {
     padding:            5px;
 }
 #aside {
-    float:              left;
 }
 #maincontent {
     min-width:          600px;
-    float:              right;
 }
 
 
