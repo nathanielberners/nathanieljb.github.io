@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(data => {
         const files = data.files;
         files.forEach(file => {
-          loadExternalHTML(file, 'dynamicContent');
+          loadExternalHTML(file, 'maincontent');
         });
       })
       .catch(error => {
@@ -36,4 +36,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Fetch and load all HTML files listed in tilesList.json
   fetchHtmlFilesList();
-});
+});:
