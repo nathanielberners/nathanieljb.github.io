@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(data => {
         const files = data.files;
         files.forEach(file => {
-          loadExternalHTML(files, 'maincontent');
+          loadExternalHTML(file, 'maincontent');
         });
       })
       .catch(error => {
