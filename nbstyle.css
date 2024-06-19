@@ -28,6 +28,9 @@ body {
     border-color:       #85ABD1;
     padding:            5px;
 }
+#tiledwall {
+    float: right;
+}
 
 
 /*** Formatting ***/
