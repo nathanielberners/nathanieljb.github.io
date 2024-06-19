@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function fetchHtmlFilesList() {
-    fetch('tilesList.json')
+    fetch('tiles/tilesList.json')
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
