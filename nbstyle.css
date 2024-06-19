@@ -29,7 +29,9 @@ body {
     padding:            5px;
 }
 #tiledwall {
-    float: right;
+}
+#aside {
+    float: left;
 }
 
 
