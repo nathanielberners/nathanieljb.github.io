@@ -28,19 +28,6 @@ body {
     border-color:       #85ABD1;
     padding:            5px;
 }
-@media screen
-    and (device-width: 320px) 
-    and (device-height: 640px) 
-    and (-webkit-device-pixel-ratio: 2) 
-    and (orientation: portrait){
-        #tiledwall {
-        min-width:          600px;
-        width:              100%;
-        float:              right;
-    }
-}
-#aside {
-}
 
 
 /*** Formatting ***/
