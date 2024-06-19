@@ -17,5 +17,5 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Load the content from test.html into the div with id "dynamicContent"
-  loadExternalHTML('test.html', 'dynamicContent');
+  loadExternalHTML('test.html', 'maincontent');
 });
