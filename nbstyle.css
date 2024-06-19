@@ -30,6 +30,7 @@ body {
 }
 #tiledwall {
     min-width:          600px;
+    width:              100%;
     float:              right;
 }
 #aside {
