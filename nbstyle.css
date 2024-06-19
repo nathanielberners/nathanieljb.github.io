@@ -20,6 +20,10 @@ body {
     border:             0px;
     padding:            5px;
 }
+#maincontent {
+    min-width:          600px;
+    float:              right;
+}
 
 /*** Formatting ***/
 h1 {
