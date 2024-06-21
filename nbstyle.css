@@ -61,6 +61,10 @@ ul {
     padding:            0px;
     list-style-type:    none;
 }
+a:hover {
+    background-color:   #85ABD1;
+    color:              #454545;
+}
 
 
 /*** Controls ***/
