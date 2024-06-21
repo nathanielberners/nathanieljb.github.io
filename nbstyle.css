@@ -27,13 +27,11 @@ body {
     border-style:       solid;
     border-color:       #85ABD1;
     padding:            5px;
+    color:              #DDDDDD;
 }
 .tile:hover {
     background-color:   #85ABD1;
     color:              #454545;
-}
-#aside {
-    float: left;
 }
 
 
