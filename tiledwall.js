@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         return response.json();
-      });
+      })
       .then(data => {
         const files = data.files;
         // Sort the files by date in descending order
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         files.forEach(file => {
           loadExternalHTML(file, 'tiledwall');
         });
-      });
+      })
       .catch(error => {
         console.error('Error fetching HTML file list:', error);
       });
