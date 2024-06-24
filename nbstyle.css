@@ -31,6 +31,7 @@ body {
 }
 .tile:hover {
     border:             1px;
+    border-style:       solid;
     border-color:       #85ABD1;
 }
 .tile:hover h3 {
