@@ -67,8 +67,7 @@ ul {
     list-style-type:    none;
 }
 a:hover {
-    background-color:   #85ABD1;
-    color:              #454545;
+    border:             1px solid #85ABD1;
 }
 
 
