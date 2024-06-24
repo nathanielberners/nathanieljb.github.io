@@ -26,9 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(data => {
         const files = data.files;
         // Sort the files by date in descending order
+          // // Manual date parsing and sorting
         files.sort((a, b) => {
-          const dateA = new Date(a.match(/(\d{4}-\d{2}-\d{2})/)[0] + 'T00:00:00');
-          const dateB = new Date(b.match(/(\d{4}-\d{2}-\d{2})/)[0] + 'T00:00:00');
+          const [yearA, monthA, dayA] = a.match(/(\d{4})-(\d{2})-(\d{2})/).slice(1, 4).map(Number);
+          const [yearB, monthB, dayB] = b.match(/(\d{4})-(\d{2})-(\d{2})/).slice(1, 4).map(Number);
+          const dateA = new Date(yearA, monthA - 1, dayA);
+          const dateB = new Date(yearB, monthB - 1, dayB);
+          console.log('Comparing dates:', dateA, dateB); // Log the dates being compared
           return dateB - dateA; // Descending order
         });
         files.forEach(file => {
