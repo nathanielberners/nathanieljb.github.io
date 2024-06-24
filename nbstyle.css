@@ -30,8 +30,10 @@ body {
     color:              #DDDDDD;
 }
 .tile:hover {
+    border:             1px;
+}
+.tile:hover h3 {
     background-color:   #85ABD1;
-    color:              #454545;
 }
 
 
