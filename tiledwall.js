@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const dynamicContent = document.getElementById('dynamicContent');
+  const dynamicContent = document.getElementById('tiledwall');
   const filterBar = document.getElementById('filterBar');
   
   function loadExternalHTML(url) {
