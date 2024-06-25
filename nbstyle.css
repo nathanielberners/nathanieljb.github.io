@@ -58,6 +58,7 @@ p {
     padding:            0px;
 }
 a {
+    border:             1px solid #454545;
     text-decoration:    none;
     color:              #85ABD1;
 }
