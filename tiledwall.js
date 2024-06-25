@@ -6,6 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentPage = 1;
   const itemsPerPage = 6;
 
+  if (!dynamicContent || !filterBar || !pagination) {
+    console.error('One or more required elements (dynamicContent, filterBar, pagination) are missing from the DOM.');
+    return;
+  }
+
   function loadExternalHTML(url) {
     return fetch(url)
       .then(response => {
@@ -103,3 +108,4 @@ document.addEventListener('DOMContentLoaded', () => {
   // Fetch and load all HTML files listed in tilesList.json
   fetchHtmlFilesList();
 });
+
