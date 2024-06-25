@@ -1,7 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const dynamicContent = document.getElementById('tiledwall');
+  const dynamicContent = document.getElementById('dynamicContent');
   const filterBar = document.getElementById('filterBar');
-  
+  const pagination = document.getElementById('pagination');
+  let currentFiles = [];
+  let currentPage = 1;
+  const itemsPerPage = 6;
+
   function loadExternalHTML(url) {
     return fetch(url)
       .then(response => {
@@ -12,9 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   }
 
-  function displayContent(files) {
+  function displayContent(files, page = 1) {
     dynamicContent.innerHTML = '';
-    files.forEach(file => {
+    const start = (page - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const filesToDisplay = files.slice(start, end);
+
+    filesToDisplay.forEach(file => {
       loadExternalHTML(file)
         .then(html => {
           dynamicContent.innerHTML += html;
@@ -23,6 +31,29 @@ document.addEventListener('DOMContentLoaded', () => {
           console.error('Error loading external HTML:', error);
         });
     });
+
+    generatePagination(files, page);
+  }
+
+  function generatePagination(files, page) {
+    pagination.innerHTML = '';
+    const totalPages = Math.ceil(files.length / itemsPerPage);
+
+    for (let i = 1; i <= totalPages; i++) {
+      const pageLink = document.createElement('a');
+      pageLink.textContent = i;
+      pageLink.href = '#';
+      pageLink.dataset.page = i;
+      if (i === page) {
+        pageLink.style.fontWeight = 'bold';
+      }
+      pageLink.addEventListener('click', (event) => {
+        event.preventDefault();
+        currentPage = parseInt(event.target.dataset.page, 10);
+        displayContent(currentFiles, currentPage);
+      });
+      pagination.appendChild(pageLink);
+    }
   }
 
   function fetchHtmlFilesList() {
@@ -54,13 +85,15 @@ document.addEventListener('DOMContentLoaded', () => {
           link.addEventListener('click', (event) => {
             event.preventDefault();
             const month = event.target.getAttribute('data-month');
-            const filteredFiles = files.filter(file => file.includes(month));
-            displayContent(filteredFiles);
+            currentFiles = files.filter(file => file.includes(month));
+            currentPage = 1;
+            displayContent(currentFiles, currentPage);
           });
         });
 
         // Display all content by default
-        displayContent(files);
+        currentFiles = files;
+        displayContent(currentFiles, currentPage);
       })
       .catch(error => {
         console.error('Error fetching HTML file list:', error);

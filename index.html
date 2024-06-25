@@ -24,12 +24,18 @@
         </div>
 
         <div class="item" id="main">
-            <div class="filter-bar" id="filterBar">
-                <p>Sort posts: </p>
+            <div class="inner" id="filters">
+                <p>Sort posts:</p>
+                <div class="filter-bar" id="filterBar">
+                    <!-- YYYY-MM tile filtering will be generated here -->
+                </div>
             </div>
-            <div class="inner" id="tiledwall">
+            <div class="inner" id="dynamicContent">
+                <!-- Dynamically loaded content will be displayed here -->
             </div><script src="tiledwall.js"></script>
-
+            <div class="inner" id="pagination">
+                <!-- Pagination controls will be generated here -->
+            </div>
             <div class="inner" id="aside">
                 <div id="profiles">
                     <h3>My Profiles</h3>
