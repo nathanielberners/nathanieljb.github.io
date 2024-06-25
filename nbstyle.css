@@ -58,7 +58,6 @@ p {
     padding:            0px;
 }
 a {
-    margin:             1px;
     border:             1px solid #454545;
     text-decoration:    none;
     color:              #85ABD1;
@@ -67,6 +66,9 @@ ul {
     margin:             5px;
     padding:            0px;
     list-style-type:    none;
+}
+li {
+    margin:             1px;
 }
 a.link:hover {
     border:             1px solid #85ABD1;
